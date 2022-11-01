@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Logoipsum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/backgroundStyle.css">
+    <script defer src="Scripts/script1.js"></script>
+</head>
+
+<body>
+
+    <header class="section header">
+        <div class="logo">
+            <a href="/"><img src="./assets/Logo.png" alt="Logotype"></a>
+        </div>
+
+        <!-- <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">home</a></li>
+                <li class="nav-item"><a href="#">features</a></li>
+                <li class="nav-item"><a href="#">pricing</a></li>
+            </ul>
+        </nav> -->
+
+        <div class="misc">
+            <a class="call-to-action" href="#">Log In</a>
+        </div>
+        <img src="assets/1814109_hamburger_menu_icon.png" alt="" width="60px">
+    </header>
+
+    <section class="section hero">
+
+        <div class="hero-block">
+            <div class="hero-text">
+                <h2 id="h2">Grow your subscription business</h2>
+                <p>Outcome-centered products that reduce churn, optimize pricing, and grow your subscription business end-to-end.</p>
+                <a class="call-to-action blue" href="#">get started</a>
+            </div>
+
+            <div class="hero-image">
+                <img class="stand layer" src="./assets/hero/stand_2.png" data-speed="2" alt="">
+                <img class="pose layer" src="./assets/hero/pose_7.png" data-speed="5" alt="">
+                <img class="bubble layer" src="./assets/hero/bubble_2.png" data-speed="2" alt="">
+            </div>
+        </div>
+
+        <div class="partners">
+            <img class="partner-logo" src="./assets/partners/logo1.png" alt="">
+            <img class="partner-logo" src="./assets/partners/logo2.png" alt="">
+            <img class="partner-logo" src="./assets/partners/logo3.png" alt="">
+            <img class="partner-logo" src="./assets/partners/logo4.png" alt="">
+            <img class="partner-logo" src="./assets/partners/logo5.png" alt="">
+        </div>
+    </section>
+
+    <section class="section pricing">
+        <div class="pricing-content">
+            <h2 class="pricing-heading">Get the right plan for future product.</h2>
+
+            <div class="pricing-options">
+                <button class="option monthly">Monthly</button>
+                <button class="option yearly">Yearly</button>
+            </div>
+        </div>
+
+        <div class="pricing-packages Month">
+            <article class="package">
+                <p class="package-type">Basic</p>
+                <h3 class="package-price">Free</h3>
+
+                <div class="package-included">
+                    <p>1 Website</p>
+                    <p>5 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Get started</a>
+            </article>
+
+            <article class="package ">
+                <p class="package-type">Premium</p>
+                <h3 class="package-price">$29<span>/month</span></h3>
+
+                <div class="package-included">
+                    <p>1 Website</p>
+                    <p>5 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Buy</a>
+            </article>
+
+            <article class="package">
+                <p class="package-type">Enterprise</p>
+                <h3 class="package-price">$49<span>/month</span></h3>
+
+                <div class="package-included">
+                    <p>1 Website</p>
+                    <p>5 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Buy</a>
+            </article>
+        </div>
+
+        <div class="pricing-packages year">
+            <article class="package">
+                <p class="package-type">Basic</p>
+                <h3 class="package-price">$99<span>/year</span></h3>
+
+                <div class="package-included">
+                    <p>1 Website</p>
+                    <p>5 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Buy</a>
+            </article>
+
+            <article class="package">
+                <p class="package-type">Premium</p>
+                <h3 class="package-price">$299<span>/year</span></h3>
+
+                <div class="package-included">
+                    <p>10 Website</p>
+                    <p>100 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Buy</a>
+            </article>
+
+            <article class="package">
+                <p class="package-type">Enterprise</p>
+                <h3 class="package-price">$499<span>/year</span></h3>
+
+                <div class="package-included">
+                    <p>15 Website</p>
+                    <p>150 GB Hosting</p>
+                    <p>Limited support</p>
+                </div>
+
+                <a class="call-to-action package-link" href="#">Buy</a>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("mousemove", parallax);
+
+        function parallax(e) {
+            this.querySelectorAll('.layer').forEach(layer => {
+                const speed = layer.getAttribute('data-speed')
+
+                const x = (window, innerWidth - e.pageX * speed) / 100
+                const y = (window, innerHeight - e.pageY * speed) / 100
+
+                layer.style.transform = `translateX(${x}px) translateY(${y}px) `
+
+            })
+        }
+    </script>
+</body>
+
+</html>

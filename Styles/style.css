@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+:root {
+    font-size: 16px;
+    --base-color: #19191B;
+    --line-color: #5454D4;
+    font-family: 'DM Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    max-width: 1100px;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item>a {
+    padding: 10px 0;
+    margin: 0 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.nav-item>a:hover {
+    border-bottom: 2px solid var(--line-color);
+}
+
+.call-to-action {
+    padding: 15px 35px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #FF7143;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.hero {
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.hero-block,
+.hero-image {
+    width: 45%;
+}
+
+.hero-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 0 5rem 0;
+}
+
+.hero-text>h2,
+.hero-text>p {
+    margin-bottom: 40px;
+}
+
+.hero-text>h2 {
+    font-size: 4.5rem;
+    line-height: 77px;
+}
+
+.hero-text>p {
+    font-size: 1.2rem;
+    color: #696871;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.stand,
+.bubble,
+.pose {
+    position: absolute;
+    transition: all .3s ease;
+}
+
+.stand {
+    top: 5rem;
+    left: 5rem;
+}
+
+.pose {
+    top: -4rem;
+    left: 5rem;
+}
+
+.bubble {
+    bottom: -5rem;
+    left: 30rem;
+}
+
+.hero-image:hover .pose {
+    transform: translateY(-2rem);
+}
+
+.hero-image:hover .bubble {
+    transform: translateY(-1rem) rotate(10deg);
+}
+
+.hero-image:hover .stand {
+    transform: translateY(-0.5rem) translateX(-2rem) rotate(-10deg);
+}
+
+.partners {
+    margin: 5rem 0;
+    padding: 2rem 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing {
+    display: flex;
+    max-width: 1100px;
+    flex-direction: column;
+}
+
+.pricing-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    width: 50%;
+}
+
+.pricing-options {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.option {
+    display: inline-block;
+    padding: 1rem 3.5rem;
+    font-weight: 500;
+    border: none;
+    font-size: 1rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.monthly {
+    border-radius: 10px 0 0 10px;
+    background-color: #5454d4;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.yearly {
+    border-radius: 0 10px 10px 0;
+    transition: 0.3s;
+}
+
+.pricing-packages {
+    display: flex;
+    margin: 5rem 0 10rem 0;
+    justify-content: space-around;
+}
+
+.package {
+    width: 30%;
+    text-align: center;
+    background-color: #F8F8F8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.package:hover {
+    width: 35%;
+    background-color: #FF7143;
+    color: #fff;
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.package:hover .package-included p,
+.package:hover .package-price,
+.package:hover .package-type {
+    color: #fff;
+}
+
+.package:hover .call-to-action {
+    background-color: #9F3919;
+    color: white;
+}
+
+.package-type {
+    font-size: 1rem;
+    color: #696871;
+    padding: 1rem;
+}
+
+.package-price {
+    font-size: 4rem;
+    font-weight: 700px;
+    padding: 0.5rem 0 1rem 0;
+}
+
+.package-price>span {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.package-included {
+    margin-bottom: 2rem;
+}
+
+.package-included p {
+    padding: 1rem;
+    color: #696871;
+    font-size: 1.1rem;
+}
+
+.package-link {
+    width: 90%;
+    color: #5454D4;
+    background-color: #fff;
+}
+
+.year {
+    display: none;
+}
+
+.Month,
+.year {
+    transition: 1s;
+    position: relative;
+    animation-duration: 1s;
+}
+
+@keyframes visible {
+    0% {
+        top: 100px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.blue {
+    background-color: #5454d4;
+    background: linear-gradient(120deg, #574bff, #9a38c7, #574bff);
+    background-size: 200%;
+    transition: 1s;
+}
+
+.blue:hover {
+    background-position: right;
+}
